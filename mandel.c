@@ -1,4 +1,4 @@
-
+#include "skata.h"
 #include "mandelcalc.h"
 
 #define WinW 300
@@ -14,18 +14,6 @@ static GC gc;
 
 /* basic win management rountines */
 
-static void openDisplay() {
-	if (dsp == NULL) { 
-		dsp = XOpenDisplay(NULL); 
-	} 
-}
-
-static void closeDisplay() {
-	if (dsp != NULL) { 
-		XCloseDisplay(dsp); 
-		dsp=NULL;
-	}
-}
 
 void openWin(const char *title, int width, int height) {
 	unsigned long blackC,whiteC;
